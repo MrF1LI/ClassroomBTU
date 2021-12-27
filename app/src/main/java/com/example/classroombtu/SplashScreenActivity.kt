@@ -14,17 +14,17 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         if (auth.currentUser != null) {
-            Handler().postDelayed(Runnable {
+            Handler().postDelayed({
                 val intent = Intent(this, ClassroomActivity::class.java)
                 startActivity(intent)
                 finish()
-            }, 1500)
+            }, 1000)
         } else {
-            Handler().postDelayed(Runnable {
+            Handler().postDelayed({
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
-            }, 1500)
+            }, 1000)
         }
 
     }

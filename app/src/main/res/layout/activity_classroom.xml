@@ -4,28 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/layoutDrawer"
     tools:context=".ClassroomActivity">
 
     <RelativeLayout
-        android:id="@+id/classroom_content"
+        android:id="@+id/classroomContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:id="@+id/classroom_header"
+            android:id="@+id/classroomHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="10dp"
             android:paddingHorizontal="15dp">
 
             <ImageView
-                android:id="@+id/burger_button"
+                android:id="@+id/burgerButton"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 app:srcCompat="@drawable/ic_burger_button" />
 
             <TextView
-                android:id="@+id/header_title"
+                android:id="@+id/headerTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -35,7 +36,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/avatar_text_view"
+                android:id="@+id/avatarTextView"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentEnd="true"
@@ -51,18 +52,18 @@
         </RelativeLayout>
 
         <View
-            android:id="@+id/bottom_header"
+            android:id="@+id/bottomHeader"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#E8928B8B"
-            android:layout_alignBottom="@+id/classroom_header" />
+            android:layout_alignBottom="@+id/classroomHeader" />
 
         <fragment
             android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/bottom_header"
+            android:layout_below="@+id/bottomHeader"
             android:layout_alignParentBottom="true"
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_graph" />
@@ -70,13 +71,14 @@
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/sidebar_navigation"
+        android:id="@+id/sidebarNavigation"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/sidebar_header"
         app:menu="@menu/sidebar_menu"
+        android:background="@color/sidebar_background"
         app:itemTextColor="@color/white" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
