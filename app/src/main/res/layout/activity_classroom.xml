@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassroomActivity">
+
+    <RelativeLayout
+        android:id="@+id/classroom_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/classroom_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="15dp">
+
+            <ImageView
+                android:id="@+id/burger_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_burger_button" />
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Classroom"
+                android:textColor="@color/title_color"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/avatar_text_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/bg_avatar"
+                android:gravity="center"
+                android:text="G"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:srcCompat="@drawable/ic_burger_button" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/bottom_header"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E8928B8B"
+            android:layout_alignBottom="@+id/classroom_header" />
+
+        <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bottom_header"
+            android:layout_alignParentBottom="true"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/sidebar_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/sidebar_header"
+        app:menu="@menu/sidebar_menu"
+        app:itemTextColor="@color/white" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "436212960819",
+    "project_id": "classroombtu-68355",
+    "storage_bucket": "classroombtu-68355.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436212960819:android:82aa94565a558ffc549d46",
+        "android_client_info": {
+          "package_name": "com.example.classroombtu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436212960819-u8g9jbdrduekrm2fov1qhttu6fss4pn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD87t6b69-VyoYhv9AMO03mK-KT_8qHjrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436212960819-u8g9jbdrduekrm2fov1qhttu6fss4pn9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
