@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_peekHeight="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomSheet" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/courseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="15dp"
+                android:text="მობილური აპლიკაციები"
+                android:textColor="#3F3B3B"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/headerBottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#928B8B"
+                android:layout_alignBottom="@+id/courseName"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerBottom"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="25dp"
+                    android:paddingVertical="10dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="5dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="კოდი"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/courseCode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="IT13GEN/0/0"
+                            android:textAlignment="textEnd"
+                            android:textSize="16sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="5dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ქულა"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/coursePoint"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="50"
+                            android:textAlignment="textEnd"
+                            android:textSize="16sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="5dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="მინ. კრედიტი"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/courseMinCredit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textSize="16sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="5dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="კრედიტი"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/courseCredit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="4"
+                            android:textAlignment="textEnd"
+                            android:textSize="16sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="5dp"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="არჩეული კურსების კრედიტების ჯამი:"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="30"
+                            android:textAlignment="textEnd"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/viewPagerTabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabIconTint="#3F3B3B"
+                    app:layout_collapseMode="pin"
+                    app:tabIndicatorColor="#3F3B3B"
+                    app:tabIndicatorGravity="bottom"
+                    android:layout_below="@id/table"/>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/viewPagerTabs"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
