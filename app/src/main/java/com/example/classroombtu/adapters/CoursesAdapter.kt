@@ -64,7 +64,6 @@ class CoursesAdapter (val context: Context, private val subjectList: ArrayList<S
                 Glide.with(context)
                     .load(currentSubject.imageUrl)
                     .into(holder.courseImage)
-
             }
 
             override fun onCancelled(error: DatabaseError) {

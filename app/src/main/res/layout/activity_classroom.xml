@@ -42,9 +42,9 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="0dp"
+                android:text="G"
                 android:background="@drawable/bg_avatar"
                 android:gravity="center"
-                android:text="G"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:srcCompat="@drawable/ic_burger_button" />
